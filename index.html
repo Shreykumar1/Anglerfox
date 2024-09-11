@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f5f7fa;
+        font-family: "Inter", sans-serif;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .header {
+        width: 70%;
+        min-width: 300px;
+        margin-bottom: 50px;
+      }
+
+      .header h1 {
+        font-size: 2.25rem;
+        color: #1f2a48;
+      }
+
+      .header p {
+        color: #494c55;
+        font-size: 18px;
+        margin-top: 30px;
+      }
+
+      /* Upper Part  */
+      .main-content {
+        display: flex;
+        padding-bottom: 40px;
+        justify-content: space-between;
+      }
+
+      .img-card {
+        width: 70%;
+        /* margin-left: 40px; */
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .photo {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .img-card .overlay {
+        position: absolute;
+        bottom: 11px;
+        border-radius: 10px;
+        left: 0;
+        width: 100%;
+        padding: 60px 20px 20px 10px;
+        /* background: linear-gradient(to bottom, transparent, blue); */
+        background: linear-gradient(
+          to top,
+          #3b82f6 0%,
+          rgba(59, 130, 246, 0.8) 40%,
+          rgba(59, 130, 246, 0.3) 70%,
+          transparent 100%
+        );
+        color: white;
+      }
+
+      .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .side-info {
+        width: 30%;
+        max-width: 210px;
+      }
+
+      .side-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .side-info p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #494c55;
+        margin-bottom: 30px;
+      }
+
+      .products-used {
+        font-weight: bold;
+        margin-top: 20px;
+        color: black;
+        margin-bottom: 20px;
+      }
+
+      .brands {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+
+      .brands img {
+        width: 100px;
+      }
+
+      /* Lower Part */
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: white;
+        padding: 6px;
+        border-radius: 8px;
+        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 20px -20px;
+        flex: 1;
+        min-width: 280px;
+        max-width: 300px;
+        height: 430px;
+      }
+
+      .card img {
+        border-radius: 6px;
+        width: 100%;
+      }
+
+      .card h3 {
+        font-size: 22px;
+        color: #1f2a48;
+        margin-block: 15px;
+        padding-inline: 15px;
+        font-weight: 800;
+      }
+
+      .card p {
+        color: #494c55;
+        font-size: 16px;
+        padding-inline: 15px;
+        word-spacing: 0.05em;
+        line-height: 1.4rem;
+      }
+
+      a {
+        color: #6a5acd;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .card a:hover {
+        text-decoration: underline;
+      }
+      .icons {
+        display: flex;
+        /* border: 1px solid black; */
+        width: 250px;
+        height: 102px;
+        justify-content: center;
+        align-items: center;
+      }
+      .gray {
+        filter: grayscale(100%);
+      }
+      .top-border {
+        border-top: 1px solid blue;
+      }
+
+      /* CSS */
+      .btn {
+        align-items: center;
+        background-color: #6a5acd;
+        border: 0;
+        border-radius: 100px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-flex;
+        font-weight: 600;
+        justify-content: center;
+        max-width: 480px;
+        min-height: 40px;
+        min-width: 0px;
+        overflow: hidden;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 645px) and (min-width: 200px) {
+        .cards {
+          justify-content: center;
+        }
+        .header {
+          margin-inline: auto;
+        }
+        .header p {
+          padding-right: 10px;
+        }
+        .header h1 {
+          font-size: 1.75rem;
+        }
+        .container {
+          padding-inline: 10px;
+        }
+        .main-content {
+          display: block;
+        }
+        .img-card {
+          width: 300px;
+          margin: auto;
+        }
+        .photo {
+          aspect-ratio: 3/2;
+        }
+        .img-card .overlay {
+          width: auto;
+          bottom: 4px;
+        }
+        .side-info {
+          margin-inline: auto;
+          max-width: 300px;
+          width: auto;
+        }
+      }
+
+      @media (min-width: 650px) and (max-width: 900px) {
+        .img-card .overlay {
+          width: auto;
+          bottom: 90px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- UPPER PART -->
+
+      <div class="header">
+        <div class="a-info" style="margin-block: 20px">
+          <a href="#">Launch & run</a>
+        </div>
+        <h1>Bring confidence to your company</h1>
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45 BC, making
+          it over 2000 years old. <a href="#">professional services team</a> and
+          <a href="#">certified partners</a> so you can see value with Keka
+          faster.
+        </p>
+        <div>
+          <button class="btn">Contact sales ></button>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="side-info">
+          <h3>Mïllîöns</h3>
+          <p>BMW owners using ConnectedDrive Store</p>
+          <h3>350+</h3>
+          <p>US dealerships</p>
+          <h4 class="products-used">Products used:</h4>
+          <p>Integrations<br />HR</p>
+        </div>
+
+        <div class="img-card">
+          <img
+            class="photo"
+            src="https://picsum.photos/700/300"
+            alt="BMW car"
+          />
+          <img
+            class="logo gray"
+            src="bmw.svg"
+            alt="BMW logo"
+            width="15"
+            height="15"
+          />
+          <div class="overlay">
+            Learn why BMW chose Keka to power e-commerce and integrations
+          </div>
+        </div>
+      </div>
+
+      <div class="brands">
+        <div class="icons top-border">
+          <img src="bmw.svg" alt="bmw" width="60" height="60" />
+        </div>
+        <div class="icons">
+          <img
+            class="gray"
+            src="amazon.svg"
+            alt="amazon"
+            width="60"
+            height="60"
+          />
+        </div>
+        <div class="icons">
+          <img
+            class="gray"
+            src="Maersk.svg"
+            alt="maersk"
+            width="100"
+            height="100"
+          />
+        </div>
+        <div class="icons">
+          <img
+            class="gray"
+            src="twilio.svg"
+            alt="twillo"
+            width="60"
+            height="60"
+          />
+        </div>
+      </div>
+
+      <!-- LOWER PART -->
+      <div class="header">
+        <div class="a-info" style="margin-block: 20px">
+          <a href="#">Launch & run</a>
+        </div>
+        <h1>Get started fast with no code to write, develop with ease.</h1>
+        <p style="max-width: 660px">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <img src="https://picsum.photos/300/200" alt="CMS" />
+          <h3>Use a ready-made CMS</h3>
+          <p>
+            All the Lorem Ipsum generators on the Internet tend to repeat
+            predefined chunks as necessary <a href="#">Squarespace</a> and
+            <a href="#">Lightspeed</a>.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300/200" alt="CMS" />
+          <h3>Hire an expert to Build your Project</h3>
+          <p>
+            Making this the first true generator on the Internet. It uses a
+            dictionary of over 200 Latin words, combined with a handful.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300/200" alt="CMS" />
+          <h3>Try our star-jam products</h3>
+          <p>
+            Make an <a href="#">project</a>, dine an
+            <a href="#">in-person charge</a> or go a
+            <a href="#">payment link</a> same from your page to start making
+            money in minutes - no line required.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
