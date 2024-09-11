@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f5f7fa;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  width: 70%;
+  min-width: 300px;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 2.25rem;
+  color: #1f2a48;
+}
+
+.header p {
+  color: #494c55;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+/* Upper Part  */
+.main-content {
+  display: flex;
+  padding-bottom: 40px;
+  justify-content: space-between;
+}
+
+.img-card {
+  width: 70%;
+  /* margin-left: 40px; */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.img-card .overlay {
+  position: absolute;
+  bottom: 11px;
+  border-radius: 10px;
+  left: 0;
+  width: 100%;
+  padding: 60px 20px 20px 10px;
+  /* background: linear-gradient(to bottom, transparent, blue); */
+  background: linear-gradient(
+    to top,
+    #3b82f6 0%,
+    rgba(59, 130, 246, 0.8) 40%,
+    rgba(59, 130, 246, 0.3) 70%,
+    transparent 100%
+  );
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.side-info {
+  width: 30%;
+  max-width: 210px;
+}
+
+.side-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.side-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #494c55;
+  margin-bottom: 30px;
+}
+
+.products-used {
+  font-weight: bold;
+  margin-top: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.brands {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.brands img {
+  width: 100px;
+}
+
+/* Lower Part */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 6px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 20px -20px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 300px;
+  height: 430px;
+}
+
+.card img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.card h3 {
+  font-size: 22px;
+  color: #1f2a48;
+  margin-block: 15px;
+  padding-inline: 15px;
+  font-weight: 800;
+}
+
+.card p {
+  color: #494c55;
+  font-size: 16px;
+  padding-inline: 15px;
+  word-spacing: 0.05em;
+  line-height: 1.4rem;
+}
+
+a {
+  color: #6a5acd;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+.icons {
+  display: flex;
+  /* border: 1px solid black; */
+  width: 250px;
+  height: 102px;
+  justify-content: center;
+  align-items: center;
+}
+.gray {
+  filter: grayscale(100%);
+}
+.top-border {
+  border-top: 1px solid blue;
+}
+
+/* CSS */
+.btn {
+  align-items: center;
+  background-color: #6a5acd;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 645px) and (min-width: 200px) {
+  .cards {
+    justify-content: center;
+  }
+  .header {
+    margin-inline: auto;
+  }
+  .header p {
+    padding-right: 10px;
+  }
+  .header h1 {
+    font-size: 1.75rem;
+  }
+  .container {
+    padding-inline: 10px;
+  }
+  .main-content {
+    display: block;
+  }
+  .img-card {
+    width: 300px;
+    margin: auto;
+  }
+  .photo {
+    aspect-ratio: 3/2;
+  }
+  .img-card .overlay {
+    width: auto;
+    bottom: 4px;
+  }
+  .side-info {
+    margin-inline: auto;
+    max-width: 300px;
+    width: auto;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 900px) {
+  .img-card .overlay {
+    width: auto;
+    bottom: 90px;
+  }
+}
